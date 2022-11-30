@@ -23,8 +23,8 @@ function MovieForm() {
       },
       body: JSON.stringify(formData),
     })
-      .then((response) => response.json())
-      .then((newMovie) => console.log(newMovie));
+      // .then((response) => response.json())
+      .then((response) => console.log(response));
   }
 
   function handleChange(e) {
@@ -47,6 +47,7 @@ function MovieForm() {
             value={formData.title}
             onChange={handleChange}
           />
+          
         </FormGroup>
         <FormGroup>
           <label htmlFor="year">Year</label>
@@ -127,6 +128,7 @@ function MovieForm() {
         </FormGroup>
         <SubmitButton type="submit">Add Movie</SubmitButton>
       </form>
+      
     </Wrapper>
   );
 }
